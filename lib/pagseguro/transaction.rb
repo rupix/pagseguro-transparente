@@ -93,6 +93,10 @@ module PagSeguro
     def valid?
       !transaction.blank?
     end
+    
+    def success?
+      errors.blank?
+    end
 
     def errors
       response['errors'] ||= {'error' => []}
