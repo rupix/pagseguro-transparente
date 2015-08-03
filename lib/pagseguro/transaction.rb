@@ -97,6 +97,9 @@ module PagSeguro
     def success?
       errors.blank?
     end
+    
+    def authorization
+    end
 
     def errors
       response['errors'] ||= {'error' => []}
